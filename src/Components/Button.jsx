@@ -16,7 +16,6 @@ export default function ContainedButtons() {
   return (
     <div className={classes.root}>
       <Button variant="contained" color="primary" onClick={(e) => {
-      e.preventDefault();
       window.open('https://www.youtube.com/watch?v=YhN4oAS3O4c&ab_channel=Pok%C3%A9mon-France', "_blank")
       }}>
         Jouez le générique

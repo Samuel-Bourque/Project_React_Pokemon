@@ -14,8 +14,8 @@ const useStyles = makeStyles({
   },
 });
 
-function createData(name, calories, fat, carbs, protein, pro, proteine) {
-    return { name, calories, fat, carbs, protein, pro, proteine };
+function createData(name, pv, att, def, vit, type, choix) {
+    return { name, pv, att, def, vit, type, choix };
   }
   
   const rows = [
@@ -48,12 +48,12 @@ function createData(name, calories, fat, carbs, protein, pro, proteine) {
         <TableCell component="th" scope="row">
           {row.name}
         </TableCell>
-        <TableCell align="center">{row.calories}</TableCell>
-        <TableCell align="center">{row.fat}</TableCell>
-        <TableCell align="center">{row.carbs}</TableCell>
-        <TableCell align="center">{row.protein}</TableCell>
-        <TableCell align="center">{row.pro}</TableCell>
-        <TableCell align="center">{row.proteine}</TableCell>
+        <TableCell align="center">{row.pv}</TableCell>
+        <TableCell align="center">{row.att}</TableCell>
+        <TableCell align="center">{row.def}</TableCell>
+        <TableCell align="center">{row.vit}</TableCell>
+        <TableCell align="center">{row.type}</TableCell>
+        <TableCell align="center">{row.choix}</TableCell>
       </TableRow>
     ))}
   </TableBody>

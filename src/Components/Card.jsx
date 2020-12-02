@@ -8,19 +8,21 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { Grid } from "@material-ui/core";
+import image1 from "../images/bulbasaur.jpg";
+import image2 from "../images/charmander.jpg";
+import image3 from "../images/squirtle.png";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 280,
   },
   media: {
-    height: 140,
+    height: 280,
   },
 });
 
 export default function MediaCard() {
   const classes = useStyles();
-  const preventDefault = (event) => event.preventDefault();
 
   return (
     <Grid container direction="row" justify="space-evenly" alignItems="flex-start">
@@ -28,8 +30,9 @@ export default function MediaCard() {
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image="/images/Bulbasaur.jpg"
+            image={image1}
             title="Image_Bulbasaur"
+            onClick={() => alert("Félicitation! Vous avez choisi Bulbizarre!")}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2" align="center">
@@ -52,7 +55,7 @@ export default function MediaCard() {
         <CardActions>
           <Link
             href="https://www.pokebip.com/pokedex/4eme_generation_fiche46__bulbizarre.html"
-            onClick={preventDefault}
+            onClick={() => alert("Vous allez être rediriger vers une autre page!")}
           >
             {"DESCRIPTION DE BULBIZARRE"}
           </Link>
@@ -62,8 +65,9 @@ export default function MediaCard() {
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            //image="/cards/images/Bulbasaur.jpg"
-            title="Image_Bulbasaur"
+            image={image2}
+            title="Image_Charmander"
+            onClick={() => alert("Félicitation! Vous avez choisi Salamèche!")}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2" align="center">
@@ -82,7 +86,7 @@ export default function MediaCard() {
         <CardActions>
           <Link
             href="https://www.pokebip.com/pokedex/4eme_generation_fiche58__salameche.html"
-            onClick={preventDefault}
+            onClick={() => alert("Vous allez être rediriger vers une autre page!")}
           >
             {"DESCRIPTION DE SALAMÈCHE"}
           </Link>
@@ -93,8 +97,9 @@ export default function MediaCard() {
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            //image="/cards/images/Bulbasaur.jpg"
-            title="Image_Bulbasaur"
+            image={image3}
+            title="Image_Squirtle"
+            onClick={() => alert("Félicitation! Vous avez choisi Carapuce!")}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2" align="center">
@@ -112,7 +117,7 @@ export default function MediaCard() {
         <CardActions>
           <Link
             href="https://www.pokebip.com/pokedex/4eme_generation_fiche333__Carapuce.html"
-            onClick={preventDefault}
+            onClick={() => alert("Vous allez être rediriger vers une autre page!")}
           >
             {"DESCRIPTION DE CARAPUCE"}
           </Link>
